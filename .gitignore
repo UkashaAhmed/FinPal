@@ -1,0 +1,122 @@
+############################
+# GLOBAL / SYSTEM FILES
+############################
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+bin/
+
+############################
+# JAVA / SPRING BOOT BACKEND
+############################
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+**/mvnw
+**/mvnw.cmd
+**/.mvn/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs and runtime
+logs/
+*.log
+*.out
+*.pid
+hs_err_pid*
+replay_pid*
+*.hprof
+
+# Application
+*.jar
+*.war
+*.ear
+*.class
+
+# Spring specific
+application-*.yml
+application-*.yaml
+application-*.properties
+.env
+.env.*
+
+############################
+# REACT + TYPESCRIPT FRONTEND
+############################
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+.cache/
+coverage/
+out/
+.next/
+storybook-static/
+
+# Dev tools
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+*.tsbuildinfo
+
+# Config overrides / envs
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*
+
+############################
+# MISC
+############################
+# Mac zip quirks
+__MACOSX/
+
+# Local database / storage
+*.db
+*.sqlite
+*.mv.db
+*.h2.db
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# JetBrains HTTP client requests
+.http/
+
+############################
+# OPTIONAL
+############################
+# If you use Docker
+docker-compose.override.yml
+.docker/
+
+# If you use AWS / GCP credentials locally
+.aws/
+.gcp/

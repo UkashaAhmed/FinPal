@@ -1,0 +1,118 @@
+:root{
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #6366F1;
+    --primary-ink: #fff;
+    --shadow: 0 10px 20px rgba(2,8,23,0.06);
+  }
+  
+  * { box-sizing: border-box; }
+  html, body, #root { height: 100%; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* Layout */
+  .app { min-height: 100vh; display: flex; }
+  .sidebar {
+    width: 260px;
+    background: var(--card);
+    border-right: 1px solid var(--border);
+    padding: 18px;
+    display: none; /* mobile hidden */
+  }
+  @media (min-width: 768px) { .sidebar { display: block; } }
+  .brand { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin: 6px 0 18px; }
+  .nav { display: grid; gap: 6px; }
+  .nav a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border-radius: 12px; text-decoration: none; color: var(--text);
+  }
+  .nav a:hover { background: #f1f5f9; }
+  .nav a.active { background: var(--primary); color: var(--primary-ink); }
+  
+  .main { flex: 1; display: flex; flex-direction: column; }
+  .topbar {
+    position: sticky; top: 0; z-index: 1; backdrop-filter: blur(8px);
+    background: rgba(255,255,255,.9); border-bottom: 1px solid var(--border);
+  }
+  .topbar-inner { height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; max-width: 1120px; margin: 0 auto; }
+  
+  .container { max-width: 1120px; margin: 0 auto; padding: 20px; }
+  
+  /* Cards & helpers */
+  .grid-3 { display: grid; gap: 16px; }
+  @media (min-width: 900px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+  .card.pad { padding: 20px; }
+  .muted { color: var(--muted); }
+  .badge {
+    display: inline-flex; align-items: center;
+    padding: 6px 10px; border-radius: 999px;
+    background: #eef2ff; color: #3730a3; font-size: 12px; font-weight: 600;
+  }
+  
+  /* Forms */
+  .input, .select {
+    appearance: none;
+    padding: 9px 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff;
+    outline: none; transition: box-shadow .15s ease, border-color .15s ease;
+  }
+  .input:focus, .select:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(99,102,241,.15); }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .controls .spacer { flex: 1; }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 10px 14px; border-radius: 12px; border: none; cursor: pointer;
+    background: var(--primary); color: var(--primary-ink); font-weight: 600;
+    box-shadow: 0 6px 14px rgba(99,102,241,.25); transition: transform .05s ease, filter .2s ease;
+  }
+  .btn:hover { filter: brightness(.98); }
+  .btn:active { transform: translateY(1px); }
+  
+  .btn-ghost {
+    background: #0f172a; color: #fff; border: none; padding: 8px 12px; border-radius: 10px;
+  }
+  .btn-ghost:hover { filter: brightness(1.05); }
+  
+  /* Notices */
+  .notice { border: 1px solid; border-radius: 12px; padding: 10px 12px; }
+  .notice.info { border-color: #bfdbfe; background: #eff6ff; color: #0c4a6e; }
+  .notice.error { border-color: #fecaca; background: #fee2e2; color: #7f1d1d; }
+  
+  /* Tables */
+  .table-wrap { overflow: auto; border-radius: 12px; }
+  .table {
+    width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border);
+  }
+  .table th {
+    text-align: left; background: #f1f5f9; border-bottom: 1px solid var(--border);
+    padding: 10px 12px; font-weight: 700; font-size: 14px;
+  }
+  .table td { border-bottom: 1px solid #f1f5f9; padding: 10px 12px; font-size: 14px; }
+  .table tr:hover td { background: #f8fafc; }
+  
+  /* Headings */
+  .h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 10px; }
+  .h2 { font-size: 18px; font-weight: 700; margin: 0; }
+  
+  /* Tiny utilities */
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .right { text-align: right; }
+  .caption { font-size: 12px; color: var(--muted); }
+  .icon { font-size: 18px; }
+  

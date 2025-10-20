@@ -1,0 +1,6 @@
+Date,Merchant,Description,Amount,Type
+2025-09-01,Starbucks,Iced latte,-5.25,DEBIT
+2025-09-02,Uber,Home to school,-8.10,DEBIT
+2025-09-03,Steam,Indie game,-12.99,DEBIT
+2025-09-04,Amazon,Headphone cable,-6.49,DEBIT
+2025-09-05,Allowance,Monthly allowance,100,CREDIT
